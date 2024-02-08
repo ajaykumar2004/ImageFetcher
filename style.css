@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(228, 216, 176);
-    background-image: url(../Parallax_Scrolling/assets/bg-2.jpg);
+    background-image: url(bg-2.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
