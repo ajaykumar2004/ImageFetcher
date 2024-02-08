@@ -28,6 +28,7 @@ async function searchImage(){
 
         gridContainer.appendChild(gridItem);
     })
+    page++;
 }
 search.addEventListener(("click") ,()=>{
     event.preventDefault();
