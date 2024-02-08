@@ -13,23 +13,21 @@ async function searchImage(){
     const data=await response.json();
 
     const results = data.results
-    searchresults.innerHTML="";
-    results.map((result)=>{
-        const imagewrapper= document.createElement('div')
-        imagewrapper.classList.add('result')
-        const image=document.createElement('img')
-        image.src = result.urls.small
-        image.alt=result.alt_description;
-        const anchor=document.createElement('a')
-        anchor.href= result.links.html
-        anchor.target="_blank"
-        anchor.textContent=result.alt_description
 
-        imagewrapper.appendChild(image);
-        imagewrapper.appendChild(anchor);
-        searchresults.appendChild(imagewrapper)
-    });
-    page++;
+    const gridContainer = document.getElementById("gridContainer");
+    gridContainer.innerHTML='';
+      results.forEach((result)=>{
+
+        const gridItem = document.createElement("div");
+        gridItem.classList.add("grid-item");
+        const img = document.createElement("img");
+        img.alt = result.alt_description;
+        img.src = result.urls.small;
+
+        gridItem.appendChild(img);
+
+        gridContainer.appendChild(gridItem);
+    })
 }
 search.addEventListener(("click") ,()=>{
     event.preventDefault();

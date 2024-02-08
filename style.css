@@ -1,43 +1,79 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(228, 216, 176);
-    background-image: url(../Parallax_Scrolling/assets/bg-2.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(228, 216, 176);
+  background-image: url("bg-2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 .container {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: auto;
-    /* max-width: 80vh; */
-    max-height: 80vh;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  /* max-width: 80vh; */
+  max-height: 80vh;
 }
-.searchBox{
-    padding-top: 10px;
-    padding-right: 10px;
+.searchBox {
+  padding-top: 10px;
+  padding-right: 10px;
 }
-#key{
-    height: 30px;
-    width:  30vh;
-    border-radius: 20px;
+#key {
+  height: 30px;
+  width: 30vh;
+  border-radius: 20px;
 }
-button{
-    background-color: cyan;
-    width: 90px;
-    height: 30px;
-    border-radius: 12px;
-    cursor: pointer;
+button {
+  background-color: cyan;
+  width: 90px;
+  height: 30px;
+  border-radius: 12px;
+  cursor: pointer;
 }
-h1,button,#key{
-    font-family :'Courier New', Courier, monospace
+h1,
+button,
+#key {
+  font-family: "Courier New", Courier, monospace;
 }
-.images{
-    /* width: 90%; */
-    /* height: 200px; */
-    background-size: cover;
-    border-radius: 10px;
-    align-items: center;
+.images {
+  /* width: 90%; */
+  /* height: 200px; */
+  background-size: cover;
+  border-radius: 10px;
+  align-items: center;
 }
+
+#gridContainer {
+  position: absolute;
+  z-index: 12;
+  top: calc(20% + 20px);
+  left: 7%;
+  right: 7%;
+} 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 10px; /* Gap between grid items */
+  justify-content: center; /* Center the grid horizontally */
+}
+
+.grid-item {
+  width: 90%;
+  aspect-ratio: 1/1; /* Maintain aspect ratio (square) */
+
+  overflow: hidden; /* Hide overflow */
+  position: relative; /* Position for absolute child */
+}
+
+.grid-item img {
+  width: 100%; /* Fill the container */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; /* Position within container */
+  top: 50%; /* Move to center vertically */
+  left: 50%; /* Move to center horizontally */
+  transform: translate(-50%, -50%); /* Center the image */
+}
+
+
