@@ -77,3 +77,46 @@ button,
 }
 
 
+=======
+    margin: 0;
+    padding: 0;
+    background-color: rgb(228, 216, 176);
+    background-image: url(bg-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    /* max-width: 80vh; */
+    max-height: 80vh;
+}
+.searchBox{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+#key{
+    height: 30px;
+    width:  30vh;
+    border-radius: 20px;
+}
+button{
+    background-color: cyan;
+    width: 90px;
+    height: 30px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+h1,button,#key{
+    font-family :'Courier New', Courier, monospace
+}
+.images{
+    /* width: 90%; */
+    /* height: 200px; */
+    background-size: cover;
+    border-radius: 10px;
+    align-items: center;
+}
